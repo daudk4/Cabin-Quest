@@ -3,11 +3,11 @@ import image1 from "@/public/about-1.jpg";
 import image2 from "@/public/about-2.jpg";
 import { getCabins } from "@/app/_lib/data-service";
 
+export const validate = 86400;
+
 export const metadata = {
   title: "About",
 };
-
-export const validate = 86400;
 
 export default async function Page() {
   const cabins = await getCabins();
