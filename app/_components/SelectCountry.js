@@ -8,8 +8,6 @@ async function SelectCountry({ defaultCountry, name, id, className }) {
   const flag =
     countries.find((country) => country.name === defaultCountry)?.flag ?? "";
 
-  console.log(flag);
-
   return (
     <select
       name={name}

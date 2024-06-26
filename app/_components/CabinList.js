@@ -6,7 +6,6 @@ async function CabinList({ filter }) {
   noStore();
   const cabins = await getCabins();
   let displayCabins;
-  console.log(cabins);
 
   switch (filter) {
     case "all":
