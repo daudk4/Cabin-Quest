@@ -6,13 +6,18 @@ import { supabase } from "./supabase";
 import { getBookings } from "./data-service";
 import { redirect } from "next/navigation";
 
-export async function signInActionGoogle() {
-  await signIn("google", { redirectTo: "/account" });
+export async function signInAction(formData) {
+  const provider = formData.get("provider");
+  await signIn(provider, { redirectTo: "/account" });
 }
 
-export async function signInActionGitHub() {
-  await signIn("github", { redirectTo: "/account" });
-}
+// export async function signInActionGoogle() {
+//   await signIn("google", { redirectTo: "/account" });
+// }
+
+// export async function signInActionGitHub() {
+//   await signIn("github", { redirectTo: "/account" });
+// }
 
 export async function signOutAction() {
   await signOut({ redirectTo: "/" });
